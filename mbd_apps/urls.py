@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="login.html")),
     path('tes', TemplateView.as_view(template_name="sign-in.html")),
-    path('accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls'), name="login_google"),
     path('logout', LogoutView.as_view()),
 ]
